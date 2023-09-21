@@ -19,8 +19,8 @@ install teal and cyan:
 
 Any mods then go into `src/<modname>`
 
-To transpile to lua, run `cyan build` in the `teal-mods` directory.  It'll output the lua to `build/<modname>`
+To transpile to lua, run `./build.sh` in the `teal-mods` directory.  It'll output the lua to `target/<modname>`
 
-## Todo
+Once built you can symbolically link the mod build output folder into the desynced mods folder. For the example "silo" mod the command for this is:
 
-Extend the build with a script to also copy `def.json` files, and to then copy build files into the mods folder.  I run on MacOS and symlink this, which is not so trivial on windows.
+    mklink /D target/silo ../mods/silo
