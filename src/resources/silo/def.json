@@ -11,7 +11,7 @@
             "name": "Silo",
             "entry": "data/data.lua",
             "dependencies": [ "Main/Data" ],
-			"type": "Addon"
+            "type": "Addon"
         }
     }
 }

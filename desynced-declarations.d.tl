@@ -181,44 +181,44 @@ end
 
 global type Tech = record
     name: string
-	texture: string
-	desc: string
-	uplink_recipe: any
-	progress_count: number
-	require_tech: {string}
-	unlocks: {string}
-	category: string
+    texture: string
+    desc: string
+    uplink_recipe: any
+    progress_count: number
+    require_tech: {string}
+    unlocks: {string}
+    category: string
 end
 
 global type Visual = record
-	mesh: string
-	-- Optional
-	flags: string
-	materials: {string}
-	-- Only for frame visuals
-	tile_size: {number, number}
-	placement: string
-	sockets: {{string, string}}
-	scale: Point
-	place_effect: string
-	move_effect: string
-	destroy_effect: string
-	tile_pattern: {number}
-	hole_pattern: {number}
-	frame_class: string
-	bob_speed: number
-	-- Only for lights
-	light_radius: integer
-	light_color: RGBA
-	light_offset: Point
-	-- misc
-	animation_speed: number
-	specular_scale: number
-	cull_ratio: number
-	minimap_color: RGBA
-	stencil: integer
-	sort_order: integer
-	mesh_offset: Point
+    mesh: string
+    -- Optional
+    flags: string
+    materials: {string}
+    -- Only for frame visuals
+    tile_size: {number, number}
+    placement: string
+    sockets: {{string, string}}
+    scale: Point
+    place_effect: string
+    move_effect: string
+    destroy_effect: string
+    tile_pattern: {number}
+    hole_pattern: {number}
+    frame_class: string
+    bob_speed: number
+    -- Only for lights
+    light_radius: integer
+    light_color: RGBA
+    light_offset: Point
+    -- misc
+    animation_speed: number
+    specular_scale: number
+    cull_ratio: number
+    minimap_color: RGBA
+    stencil: integer
+    sort_order: integer
+    mesh_offset: Point
 end
 
 -----------------------
@@ -578,15 +578,15 @@ global type WidgetDef = record
 end
 
 global type ItemDef = record
-	name: string
+    name: string
     tag: string
-	texture: string
-	slot_type: SlotType
-	stack_size: integer
-	visual: string
-	production_recipe: ProductionRecipe
-	-- Recipe of resources harvested from the world
-	mining_recipe: MiningRecipe
+    texture: string
+    slot_type: SlotType
+    stack_size: integer
+    visual: string
+    production_recipe: ProductionRecipe
+    -- Recipe of resources harvested from the world
+    mining_recipe: MiningRecipe
 end
 
 global type RegisterDef = record
@@ -603,34 +603,34 @@ global type CompDef = record
     desc: string
     tag: string
     race: Race
-	texture: string
-	visual: string
-	slot_type: SlotType
+    texture: string
+    visual: string
+    slot_type: SlotType
     stack_size: integer
-	attachment_size: ComponentSize
-	activation: string
-	registers: {RegisterDef}
-	power: number
-	power_storage: integer
-	drain_rate: integer
-	charge_rate: integer
-	bandwidth: integer
-	transfer_radius: integer
-	adjust_extra_power: boolean
-	dumping_ground: boolean
-	effect: string
-	effect_socket: string
-	trigger_radius: integer
-	trigger_channels: string
-	non_removable: boolean
-	production_recipe: ProductionRecipe
+    attachment_size: ComponentSize
+    activation: string
+    registers: {RegisterDef}
+    power: number
+    power_storage: integer
+    drain_rate: integer
+    charge_rate: integer
+    bandwidth: integer
+    transfer_radius: integer
+    adjust_extra_power: boolean
+    dumping_ground: boolean
+    effect: string
+    effect_socket: string
+    trigger_radius: integer
+    trigger_channels: string
+    non_removable: boolean
+    production_recipe: ProductionRecipe
 
     get_ui: function(self: CompDef, comp: Component): Widget
-	on_add: function(self: CompDef, comp: Component)
-	on_remove: function(self: CompDef, comp: Component)
-	on_update: function(self: CompDef, comp: Component, cause: any)
-	on_trigger: function(self: CompDef, comp: Component, otherEntity: any)
-	on_take_damage: function(self: CompDef, comp: Component, amount: integer)
+    on_add: function(self: CompDef, comp: Component)
+    on_remove: function(self: CompDef, comp: Component)
+    on_update: function(self: CompDef, comp: Component, cause: any)
+    on_trigger: function(self: CompDef, comp: Component, otherEntity: any)
+    on_take_damage: function(self: CompDef, comp: Component, amount: integer)
 
     RegisterComponent: function(self: CompDef, id: string, def: CompDef): CompDef
 end
@@ -638,34 +638,34 @@ end
 global Comp: CompDef
 
 global type FrameDef = record
-	name: string
-	visibility_range: integer
-	visual: string
-	slots: {SlotType : integer}
-	components: {{string, string}}
+    name: string
+    visibility_range: integer
+    visual: string
+    slots: {SlotType : integer}
+    components: {{string, string}}
     construction_recipe: ConstructionRecipe
     desc: string
     race: Race
     size: FrameSize
     texture: string
-	slot_type: SlotType
-	movement_speed: integer
-	flags: string
-	minimap_color: RGB
-	drone_range: integer
-	is_tethered: boolean
-	convert_to: string
-	docked_visual: string
-	health_points: integer
-	trigger_channels: string
-	start_disconnected: boolean
-	start_lootable: boolean
-	on_placed: function(self: FrameDef, entity: any)
-	on_remove: function(self: FrameDef, entity: any)
-	on_destroy: function(self: FrameDef, entity: any)
-	on_interact: function(self: FrameDef, entity: any)
-	can_interact: function(self: FrameDef, entity: any)
-	type: FrameType
+    slot_type: SlotType
+    movement_speed: integer
+    flags: string
+    minimap_color: RGB
+    drone_range: integer
+    is_tethered: boolean
+    convert_to: string
+    docked_visual: string
+    health_points: integer
+    trigger_channels: string
+    start_disconnected: boolean
+    start_lootable: boolean
+    on_placed: function(self: FrameDef, entity: any)
+    on_remove: function(self: FrameDef, entity: any)
+    on_destroy: function(self: FrameDef, entity: any)
+    on_interact: function(self: FrameDef, entity: any)
+    can_interact: function(self: FrameDef, entity: any)
+    type: FrameType
 
     RegisterFrame: function(self: FrameDef, id: string, toRegister: FrameDef): FrameDef
 end
@@ -1190,19 +1190,19 @@ end
 
 global type DataSettings = record
     world_faction: string
-	foundation_frame: string
-	dropped_item_frame: string
-	dropped_item_visual: string
-	dropped_item_slots: number
-	dropped_item_distance: number
-	inventory_item_visual: string
-	inventory_component_visual: string
-	click_sound_effect: string
-	hover_sound_effect: string
-	added_component_effect: string
-	removed_component_effect: string
-	record default_faction_colors 
-		bugs: RGB
+    foundation_frame: string
+    dropped_item_frame: string
+    dropped_item_visual: string
+    dropped_item_slots: number
+    dropped_item_distance: number
+    inventory_item_visual: string
+    inventory_component_visual: string
+    click_sound_effect: string
+    hover_sound_effect: string
+    added_component_effect: string
+    removed_component_effect: string
+    record default_faction_colors 
+        bugs: RGB
     end
     player_colors: {RGB}
     state_priority_list: {string}

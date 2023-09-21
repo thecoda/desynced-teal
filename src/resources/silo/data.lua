@@ -2,7 +2,7 @@ local package = ...
 
 -- files loaded when mod is initializing
 package.includes = {
-	"frames.lua",
+    "frames.lua",
     "components.lua"
 }
 
