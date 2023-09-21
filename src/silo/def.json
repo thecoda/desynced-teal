@@ -1,0 +1,17 @@
+{
+    "id": "Silo",
+    "name": "Silo",
+    "version_name": "0.1",
+    "version_code": 1,
+    "author": "Kevin Wright",
+    "homepage": "https://www.desyncedgame.com/",
+    "description": "Silos for bulk resource storage",
+    "packages": {
+        "Data": {
+            "name": "Silo",
+            "entry": "data/data.lua",
+            "dependencies": [ "Main/Data" ],
+			"type": "Addon"
+        }
+    }
+}
