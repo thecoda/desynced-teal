@@ -12,14 +12,14 @@ Install luarocks: https://github.com/luarocks/luarocks/wiki/Installation-instruc
 
 install teal and cyan:
 
-    luarocks install teal
+    luarocks install tl
     luarocks install cyan
 
 ## Development
 
 Any mods then go into `src/<modname>`
 
-To transpile to lua, run `tl build` in the `teal-mods` directory.  It'll output the lua to `build/<modname>`
+To transpile to lua, run `cyan build` in the `teal-mods` directory.  It'll output the lua to `build/<modname>`
 
 ## Todo
 
