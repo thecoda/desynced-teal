@@ -17,10 +17,18 @@ install teal and cyan:
 
 ## Development
 
-Any mods then go into `src/<modname>`
+All your code goes under:
+- `src/teal/<modname>` for teal files to be transpiled
+- `src/resources/<modname>` for `def.json`, meshes, images, and raw `.lua` files
 
-To transpile to lua, run `./build.sh` in the `teal-mods` directory.  It'll output the lua to `target/<modname>`
+To transpile to lua, run `./build.sh` in the `teal-mods` directory.  It'll then:
+- transpile the teal to lua in `build/lua/<modname>`
+- merge the lua files with the resources to `build/target/<modname>`
 
-Once built you can symbolically link the mod build output folder into the desynced mods folder. For the example "silo" mod the command for this is:
+Once built you can symbolically link the `build/target/<modname>` output folder into the desynced mods folder. For the example "silo" mod the command for this is:
 
-    mklink /D target/silo ../mods/silo
+    mklink /D build/target/silo ../mods/silo
+
+Subsequent builds can then be immediately followed by F7 to reload.
+
+Alternately, you can modify the build script to copy the folder once built.

@@ -1,6 +1,6 @@
 return {
-   build_dir = "lua-files",
-   source_dir = "src",
+   build_dir = "build/lua",
+   source_dir = "src/teal",
    global_env_def = "desynced-declarations",
    scripts = {
       build = {

@@ -46,5 +46,5 @@ local function copyDirectory(source: string, target: string): boolean
     end
 end
 
-copyDirectory("lua-files", "target")
-copyDirectory("src", "target")
+copyDirectory("build/lua", "build/target")
+copyDirectory("src/resources", "build/target")
