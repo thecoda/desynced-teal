@@ -1,5 +1,5 @@
 return {
    build_dir = "build",
    source_dir = "src",
-   global_env_def = "types.desynced"
+   global_env_def = "desynced"
 }
